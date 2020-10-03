@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Button from "@material-ui/core/Button";
-import AddIcon from "@material-ui/icons/Add";
 
 const CreateNote = (props) => {
   const [note, setNote] = useState({
@@ -17,6 +15,7 @@ const CreateNote = (props) => {
     });
   };
   const addEvent = (event) => {
+    event.preventDefault();
     props.passnote(note);
     setNote({
       title: "",
@@ -44,14 +43,7 @@ const CreateNote = (props) => {
             cols="35"
             placeholder="Write a note..."
           ></textarea>
-          <Button
-            onClick={addEvent}
-            variant="contained"
-            color="primary"
-            size="small"
-          >
-            <AddIcon className="plus_sign" />
-          </Button>
+          <i onClick={addEvent} className="addButton fas fa-plus-circle"></i>
         </form>
       </div>
     </React.Fragment>

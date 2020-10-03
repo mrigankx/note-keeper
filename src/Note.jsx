@@ -1,8 +1,8 @@
 import React from "react";
-import { Button } from "@material-ui/core";
-import DeleteIcon from "@material-ui/icons/Delete";
+
 const Note = (props) => {
-  const deleteNote = () => {
+  const deleteNote = (event) => {
+    event.preventDefault();
     props.deleteItem(props.id);
   };
   return (
@@ -11,9 +11,7 @@ const Note = (props) => {
         <h1 contentEditable="true">{props.title}</h1>
         <hr />
         <p contentEditable="true">{props.content}</p>
-        <Button onClick={deleteNote} variant="contained" color="secondary">
-          <DeleteIcon />
-        </Button>
+        <i onClick={deleteNote} className="trashIcon fas fa-trash"></i>
       </div>
     </>
   );
