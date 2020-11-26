@@ -8,8 +8,8 @@ body {
 }
 
 .header {
-  background-color: rgb(226, 226, 43);
-  color: black;
+  background-color: rgb(18, 117, 209);
+  color: white;
   text-align: center;
 }
 
@@ -63,12 +63,11 @@ textarea {
   border-radius: 50%;
   outline: none;
   font-size: 50px;
-  color: blue;
+  color: rgb(18, 117, 209);
 }
 
 .addButton:hover {
-  background-color: rgb(221, 221, 23);
-  color: white;
+  color: rgb(75, 241, 60);
 }
 .delete {
   background-color: red;

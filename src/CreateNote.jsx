@@ -31,7 +31,7 @@ const CreateNote = (props) => {
             name="title"
             onChange={inputEvent}
             type="text"
-            placeholder="Title"
+            placeholder="Title" 
           />
           <hr />
           <br />
@@ -41,7 +41,7 @@ const CreateNote = (props) => {
             onChange={inputEvent}
             rows="5"
             cols="35"
-            placeholder="Write a note..."
+            placeholder="Write a note..." required
           ></textarea>
           <i onClick={addEvent} className="addButton fas fa-plus-circle"></i>
         </form>

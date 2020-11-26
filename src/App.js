@@ -1,3 +1,4 @@
+//jshint esversion: 6
 import React, { useState } from "react";
 import Header from "./Header";
 
@@ -20,6 +21,7 @@ const App = () => {
   };
   return (
     <React.Fragment>
+      <div>
       <Header />
       <CreateNote passnote={addNote} />
       {items.map((val, index) => {
@@ -33,6 +35,7 @@ const App = () => {
           />
         );
       })}
+        </div>
     </React.Fragment>
   );
 };
